@@ -1,0 +1,88 @@
+@import "style";
+@import "header";
+@import "banner";
+@import "footer";
+
+.auth {
+   margin-top: 61px;
+
+   &-block {
+      @include flex(row, space-between, null, null);
+   }
+
+   &-register {
+      position: relative;
+
+      &:before {
+         content: "";
+         height: 100%;
+         width: 1px;
+         background: #e7e7e7;
+         @include position(absolute, 0, null, null, -35px, 2);
+      }
+   }
+
+   &-login,
+   &-register {
+      width: 550px;
+
+      p:nth-child(1) {
+         margin-bottom: 42px;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 18px, 400, #575153);
+      }
+
+      input[type="email"],
+      input[type="password"] {
+         display: block;
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 33px;
+         border: 1px solid #e7e7e7;
+         @include fontSet(Montserrat, 15px, 300, #575153);
+      }
+
+      input[type="submit"] {
+         padding: 16px 35px;
+         border: 2px solid #737373;
+         background: transparent;
+         letter-spacing: 2px;
+         transition: 0.3s all linear;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 16px, 400, #454647);
+
+         &:hover {
+            color: #fff;
+            background: $skyBlue;
+            border-color: $skyBlue;
+         }
+      }
+
+      label {
+         margin: 6px 0 30px 0;
+         display: inline-block;
+         @include textCharacter(none, none, 20px);
+         @include fontSet(Roboto, 15px, 400, #8e8c8c);
+
+         span {
+            padding-left: 19px;
+         }
+      }
+
+      div {
+         @include flex(row, space-between, null, center);
+
+         p {
+            text-align: right;
+            max-width: 221px;
+            @include textCharacter(none, none, 20px);
+            @include fontSet(Roboto, 15px, 400, #8e8c8c);
+         }
+
+         a {
+            @include textCharacter(none, none, 22px);
+            @include fontSet(Roboto, 15px, 400, $skyBlue);
+         }
+      }
+   }
+}

@@ -1,0 +1,162 @@
+@import "style";
+@import "header";
+@import "look";
+@import "footer";
+
+.collection {
+   background: #f8f8f8;
+
+   &-item {
+      position: relative;
+      @include flex(row, space-between, null, null);
+   }
+
+   &-photo img {
+      margin-top: -111px;
+   }
+
+   &-brand {
+      top: 85px;
+      letter-spacing: 100px;
+      @include center("horizontal", 1);
+      @include textCharacter(uppercase, none, null);
+      @include fontSet(Montserrat, 450px, 700, #575153);
+   }
+
+   &-link {
+      padding-right: 50px;
+      padding-bottom: 125px;
+      @include flex(row, flex-end, null, flex-end);
+
+      a {
+         @include link;
+         padding: 19px 33px;
+      }
+   }
+}
+
+.fashion {
+   margin-top: 165px;
+   padding: 20px 50px 0 50px;
+   display: grid;
+   grid-gap: 30px;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 500px 173px 500px;
+
+   &-item {
+      position: relative;
+   }
+
+   &-block {
+      width: 100%;
+      height: 100%;
+      transition: 0.3s all linear;
+      min-height: 500px;
+
+      &:hover {
+         box-shadow: 0 3px 7px 2px #d4d3d3;
+
+         .fashion-character {
+            padding: 15px;
+            max-height: 100vh;
+            box-shadow: 0 3px 7px 2px #d4d3d3;
+         }
+      }
+   }
+
+   &-price {
+      @include textCharacter(uppercase, none, null);
+      @include fontSet(Montserrat, 21px, 300, #9a9a9a);
+      @include position(absolute, 15px, null, null, 15px, 2);
+
+      span {
+         padding-right: 20px;
+      }
+
+      .discount {
+         text-decoration: line-through;
+      }
+   }
+
+   &-photo {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background: #f8f8f8;
+      position: relative;
+
+      a {
+         @include position(absolute, 0, 0, 0, 0, 2);
+      }
+
+      img {
+         @include img;
+      }
+   }
+
+   &-character {
+      z-index: 3;
+      max-height: 0;
+      padding: 0 15px;
+      overflow: hidden;
+      text-align: center;
+      background: #fff;
+      position: relative;
+      transition: 0.3s all linear;
+
+      p:nth-child(1) {
+         @include textCharacter(uppercase, none, null);
+         @include fontSet(Montserrat, 13px, 400, #727272);
+      }
+      p:nth-child(2) {
+         margin: 15px 0;
+         @include fontSet(Roboto, 15px, 400, #8e8c8c);
+      }
+
+      button {
+         width: 30px;
+         height: 30px;
+         border: none;
+         color: #fff;
+         border-radius: 50%;
+         background: #727272;
+         transition: 0.3s all linear;
+         cursor: pointer;
+
+         &:nth-child(n + 2) {
+            margin-left: 10px;
+         }
+
+         &:hover {
+            background: $skyBlue;
+         }
+
+         i {
+            line-height: 20px;
+         }
+      }
+   }
+
+   &-item:nth-child(3) {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3;
+   }
+
+   &-item:nth-child(4) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 4;
+   }
+
+   &-item:nth-child(5) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+   }
+
+   &-item:nth-child(6) {
+      grid-column-start: 4;
+   }
+}

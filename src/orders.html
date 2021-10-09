@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Document</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/adminPage.css">
+   <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+   <div id="wrapper" id="wrapper">
+
+      <div id="sidebar-nav" class="sidebar">
+         <div class="sidebar-scroll">
+            <nav>
+               <ul class="navigation">
+                  <li><a href="admin.html"><span>Users</span></a></li>
+                  <li><a href="products.html"> <span>Products</span></a></li>
+                  <li class="active"><a href="orders.html"><span>Orders</span></a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+
+      <div class="main">
+         <table class="products table table-hover">
+            <thead>
+               <tr class="row">
+                  <th class="col-4">Client name</th>
+                  <th class="col-4">Phone number</th>
+                  <th class="col-2">Show orders</th>
+                  <th class="col-2">Execute</th>
+               </tr>
+            </thead>
+            <tbody id="clientList">
+               <!-- <tr>
+                  <td>Salamat</td>
+                  <td>+9989999506584</td>
+                  <td>
+                     <button class="form-control btn btn-primary" data-action="show">Show</button>
+                  </td>
+                  <td>
+                     <button class="form-control btn btn-danger" data-action="execute">Execute</button>
+                  </td>
+               </tr> -->
+            </tbody>
+         </table>
+
+         <div class="orders hidden" id="ordersBlock">
+            <button class="orders__close" id="ordersClose">Close</button>
+            <table class="products table table-hover">
+               <thead>
+                  <tr>
+                     <th>Image</th>
+                     <th>Type</th>
+                     <th>Price</th>
+                     <th>Product code</th>
+                     <th>Count</th>
+                     <th>Discount</th>
+                  </tr>
+               </thead>
+               <tbody id="ordersList">
+                  <tr>
+                     <td><img src="images/shirt2.png" alt=""></td>
+                     <td>Type</td>
+                     <td>Price</td>
+                     <td>Product code</td>
+                     <td>10</td>
+                     <td>Discount</td>
+                  </tr>
+               </tbody>
+            </table>
+
+         </div>
+      </div>
+
+   </div>
+</body>
+
+</html>

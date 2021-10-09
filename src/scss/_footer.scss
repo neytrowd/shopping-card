@@ -1,0 +1,103 @@
+.footer {
+   margin-top: 123px;
+
+   ul {
+      list-style: none;
+   }
+
+   &-block {
+      background: #f8f8f8;
+   }
+
+   &-box {
+      padding: 60px 0;
+      @include flex(row, space-between, null, null);
+   }
+
+   &-links {
+      flex-basis: 19%;
+
+      p {
+         margin-bottom: 25px;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 13px, 600, #575153);
+      }
+   }
+
+   &-list {
+      li:nth-child(n + 2) {
+         margin-top: 10px;
+      }
+
+      a {
+         transition: 0.3s all linear;
+         @include textCharacter(none, none, 20px);
+         @include fontSet(Montserrat, 14px, 400, #575153);
+      }
+
+      a:hover {
+         color: $skyBlue;
+      }
+   }
+
+   &-banner {
+      @include flex(row, space-between, null, null);
+   }
+
+   &-section {
+      width: 570px;
+      height: 200px;
+      text-align: center;
+      @include flex(row, center, null, center);
+
+      &:nth-child(1) {
+         background: $lightBlack;
+      }
+
+      &:nth-child(2) {
+         background: $skyBlue;
+      }
+
+      p {
+         @include textCharacter(uppercase, none, 48px);
+         @include fontSet(Montserrat, 36px, 300, #fff);
+      }
+
+      p:nth-child(1) {
+         font-weight: 700;
+      }
+   }
+
+   &-social {
+      li {
+         display: inline-block;
+      }
+
+      li:nth-child(n + 2) {
+         margin-left: 50px;
+      }
+
+      a {
+         @include textCharacter(uppercase, none, 48px);
+         @include fontSet(null, 36px, 300, #fff);
+      }
+   }
+
+   &-author {
+      margin-top: 56px;
+      background: $lightBlack;
+   }
+
+   &-author-block {
+      @include flex(row, space-between, null, center);
+   }
+
+   &-info {
+      padding: 16px 0;
+      @include fontSet(Montserrat, 13px, 400, #999999);
+
+      span:nth-child(2) {
+         margin-left: 30px;
+      }
+   }
+}

@@ -1,0 +1,303 @@
+.header {
+   ul {
+      list-style: none;
+   }
+
+   &-block {
+      background: $lightBlack;
+   }
+
+   &-block__box {
+      @include flex(row, space-between, null, center);
+   }
+
+   &-block__currency {
+      @include fontSet(Montserrat, 13px, 600, #777777);
+   }
+
+   &-block__links {
+      width: 360px;
+      @include flex(row, space-between, null, center);
+   }
+
+   &-block__auth {
+      li {
+         display: inline-block;
+      }
+
+      li:nth-child(2) {
+         margin-left: 27px;
+      }
+
+      a {
+         @include textCharacter(none, none, null);
+         @include fontSet(Montserrat, 13px, 600, #777777);
+      }
+   }
+
+   &-block__cart {
+      position: relative;
+
+      &:hover .header-block__items {
+         display: block;
+      }
+   }
+
+   &-block__basket {
+      border: none;
+      cursor: pointer;
+      padding: 15px 33px;
+      position: relative;
+      background: $skyBlue;
+      @include fontSet(Montserrat, 13px, null, #fff);
+
+      span:nth-child(2) {
+         padding-left: 20px;
+      }
+   }
+
+   &-block__items {
+      display: none;
+      padding: 20px;
+      width: 450px;
+      border-radius: 3px;
+      background: #f8f8f8;
+      box-shadow: 0 0 5px 0 rgb(100, 99, 99);
+      @include position(absolute, 103%, null, null, -250px, 3);
+   }
+
+   &-block__product {
+      @include flex(row, space-between, null, center);
+
+      &:nth-child(n + 2) {
+         margin-top: 15px;
+      }
+   }
+
+   &-block__product-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid rgb(143, 141, 141);
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+   }
+
+   &-block__product-name {
+      min-width: 190px;
+      max-width: 190px;
+      @include textCharacter(capitalize, none, null);
+      @include fontSet(Montserrat, 15px, null, #222);
+   }
+
+   &-block__product-count {
+      width: 50px;
+      padding: 4px 5px;
+      @include fontSet(Montserrat, 15px, null, #222);
+   }
+
+   &-block__product-delete {
+      border: none;
+      background: $skyBlue;
+      padding: 7px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+      @include fontSet(Montserrat, 15px, null, #fff);
+   }
+
+   &-block__items-actions {
+      p {
+         text-align: center;
+         margin-top: 20px;
+         @include textCharacter(capitalize, none, null);
+         @include fontSet(Montserrat, 15px, null, #222);
+      }
+
+      button {
+         border: none;
+         background: $skyBlue;
+         padding: 10px 30px;
+         cursor: pointer;
+         border-radius: 3px;
+         @include fontSet(Montserrat, 15px, null, #fff);
+
+         &:nth-child(2) {
+            margin-left: 50px;
+         }
+      }
+   }
+
+   // holder
+
+   &-holder {
+      background: #f8f8f8;
+   }
+
+   &-holder__box {
+      position: relative;
+      @include flex(row, space-between, null, center);
+   }
+
+   &-holder__logo {
+      position: relative;
+      z-index: 2;
+
+      a {
+         @include textCharacter(uppercase, none, null);
+         @include fontSet(Montserrat, 24px, null, #222);
+      }
+
+      span {
+         font-weight: bold;
+      }
+   }
+
+   &-holder__list {
+      z-index: 2;
+      position: relative;
+
+      > li {
+         padding: 42px 0 51px 0;
+         display: inline-block;
+         position: relative;
+
+         &:hover > a {
+            color: $skyBlue;
+         }
+
+         &:hover > div {
+            display: block;
+         }
+      }
+
+      > li:nth-child(n + 2) {
+         margin-left: 50px;
+      }
+
+      .arrow:before {
+         content: "\f078";
+         @include fontSet(null, 12px, null, $lightGrey);
+         @include position(absolute, 66px, null, null, 0, 4);
+      }
+
+      a {
+         transition: 0.3s all linear;
+         @include textCharacter(uppercase, none, null);
+         @include fontSet(Montserrat, 13px, 600, #222);
+
+         &:hover {
+            color: $skyBlue;
+         }
+      }
+   }
+
+   &-holder__submenu {
+      width: 470px;
+      display: none;
+      padding: 27px 29px;
+      background: #f8f8f8;
+      transform: translateX(-70%);
+      box-shadow: 0 17px 24px rgba(0, 0, 0, 0.14);
+      @include position(absolute, 92px, null, null, 0, 5);
+
+      &-inner {
+         @include flex(row, space-between, null, null);
+
+         div:nth-child(1) {
+            flex-basis: 60%;
+         }
+
+         div:nth-child(2) {
+            flex-basis: 40%;
+         }
+      }
+
+      p {
+         margin-bottom: 24px;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 12px, 600, #575153);
+      }
+
+      li:nth-child(n + 2) {
+         margin-top: 10px;
+      }
+
+      a {
+         @include textCharacter(none, none, 20px);
+         @include fontSet(Montserrat, 14px, 400, #575153);
+      }
+
+      &-banner {
+         margin-top: 57px;
+         text-align: center;
+         background: $lightBlack;
+         padding: 53px 53px 35px 53px;
+
+         p {
+            @include textCharacter(uppercase, none, 32px);
+            @include fontSet(Montserrat, 36px, 600, #fff);
+         }
+      }
+   }
+
+   &-holder__form {
+      @include position(absolute, 42px, null, null, 300px, 4);
+
+      input {
+         width: 190px;
+         height: 30px;
+         padding: 10px;
+         border: 1px solid #e7e7e7;
+         background-color: #f8f8f8;
+         @include fontSet(Montserrat, 13px, 400, #989898);
+      }
+
+      button {
+         border: none;
+         background: none;
+         cursor: pointer;
+         color: #989898;
+         @include position(absolute, 7px, 5px, null, null, 4);
+      }
+   }
+
+   &-buy {
+      width: 300px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      z-index: 10;
+      padding: 20px;
+
+      div{
+         margin-bottom: 20px;
+      }
+
+      label{
+         display: block;
+         @include fontSet(Montserrat, 15px, null, #222);
+      }
+
+      input{
+         width: 100%;
+         margin-top: 5px;
+         padding: 5px 10px;
+      }
+
+      button{
+         display: inline-block;
+         padding: 5px 20px;
+         border: none;
+         background: $skyBlue;
+         color: #fff;
+         cursor: pointer;
+         border-radius: 3px;
+      }
+   }
+}

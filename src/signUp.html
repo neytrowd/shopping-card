@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/signUp.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+   <title>Sign Up</title>
+</head>
+
+<body>
+   <div class="wrapper" id="wrapper">
+      <header class="header">
+         <div class="header-block">
+            <div class="container">
+               <div class="header-block__box">
+                  <div class="header-block__currency">
+                     <p>
+                        Currency : GBP <i class="fas fa-chevron-down"></i>
+                     </p>
+                  </div>
+                  <div class="header-block__links">
+                     <ul class="header-block__auth">
+                        <li class="header-block__auth-item">
+                           <a href="signUp.html">Register</a>
+                        </li>
+                        <li class="header-block__auth-item">
+                           <a href="signUp.html">Sign In</a>
+                        </li>
+                     </ul>
+                     <div class="header-block__cart">
+                        <button class="header-block__basket" id="headerBasket">
+                           <span class="fas fa-shopping-cart"></span>
+                           <span class="header-block__counter" id="headerCounter">0</span>
+                           <span>items</span>
+                        </button>
+                        <div class="header-block__items">
+                           <div class="header-block__items-inner" id="headerItems">
+                              <!-- <div class="header-block__product">
+                                 <div class="header-block__product-photo">
+                                    <img src="images/shirt1.png" alt="product">
+                                 </div>
+                                 <div class="header-block__product-name">
+                                    ave classic sweatshirt
+                                 </div>
+                                 <input type="number" class="header-block__product-count">
+                                 <button class="header-block__product-delete">Delete</button>
+                              </div> -->
+                           </div>
+                           <div class="header-block__items-actions">
+                              <p>Total: <span id="headerTotal">0</span></p>
+                              <p>
+                                 <button id="headerClear">Clear cart</button>
+                                 <button id="headerBuy">Buy items</button>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="header-holder">
+            <div class="container">
+               <div class="header-holder__box">
+                  <div class="header-holder__logo">
+                     <a href="index.html"><span>avenue</span> fashion</a>
+                  </div>
+                  <nav class="header-holder__nav">
+                     <ul class="header-holder__list">
+                        <li class="header-holder__list-item arrow fas">
+                           <a href="#">mens</a>
+                           <div class="header-holder__submenu">
+                              <div class="header-holder__submenu-inner">
+                                 <div>
+                                    <p>casuals</p>
+                                    <ul>
+                                       <li><a href="#">Jackets</a></li>
+                                       <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                       <li><a href="#">Polo Shirts</a></li>
+                                       <li><a href="#">Sportswear</a></li>
+                                       <li><a href="#">Trousers & Chinos</a></li>
+                                       <li><a href="#">T-Shirts</a></li>
+                                    </ul>
+                                 </div>
+                                 <div>
+                                    <p>Formal</p>
+                                    <ul>
+                                       <li><a href="#">Jackets</a></li>
+                                       <li><a href="#">Shirts</a></li>
+                                       <li><a href="#">Suits</a></li>
+                                       <li><a href="#">Trousers</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="header-holder__submenu-banner">
+                                 <p>Autumn sale! </p>
+                                 <p>up to 50% off</p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="header-holder__list-item arrow fas">
+                           <a href="#">womens</a>
+                           <div class="header-holder__submenu">
+                              <div class="header-holder__submenu-inner">
+                                 <div>
+                                    <p>casuals</p>
+                                    <ul>
+                                       <li><a href="#">Jackets</a></li>
+                                       <li><a href="#">Hoodies & Sweatshirts</a></li>
+                                       <li><a href="#">Polo Shirts</a></li>
+                                       <li><a href="#">Sportswear</a></li>
+                                       <li><a href="#">Trousers & Chinos</a></li>
+                                       <li><a href="#">T-Shirts</a></li>
+                                    </ul>
+                                 </div>
+                                 <div>
+                                    <p>Formal</p>
+                                    <ul>
+                                       <li><a href="#">Jackets</a></li>
+                                       <li><a href="#">Shirts</a></li>
+                                       <li><a href="#">Suits</a></li>
+                                       <li><a href="#">Trousers</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="header-holder__submenu-banner">
+                                 <p>Autumn sale! </p>
+                                 <p>up to 50% off</p>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="header-holder__list-item">
+                           <a href="brand.html">the brand</a>
+                        </li>
+                        <li class="header-holder__list-item">
+                           <a href="localStore.html">local stores</a>
+                        </li>
+                        <li class="header-holder__list-item arrow fas">
+                           <a href="lookBook.html">look book</a>
+                           <div class="header-holder__submenu">
+                              <div class="header-holder__submenu-inner">
+                                 <div>
+                                    <p>Our Lookbooks</p>
+                                    <ul>
+                                       <li><a href="#">Latest Posts (mixed)</a></li>
+                                       <li><a href="#">Men’s Lookbook</a></li>
+                                       <li><a href="#">Women’s Lookbook</a></li>
+                                    </ul>
+                                 </div>
+                                 <div>
+                                    <p>Your Lookbook</p>
+                                    <ul>
+                                       <li><a href="#">View and Edit</a></li>
+                                       <li><a href="#">Share</a></li>
+                                       <li><a href="#">Delete</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="header-holder__submenu-banner">
+                                 <p>Autumn sale! </p>
+                                 <p>up to 50% off</p>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </nav>
+                  <div class="header-holder__form">
+                     <form action="#">
+                        <input type="text" placeholder="Search" id="headerPoly">
+                        <button id="headerSearch">
+                           <i class="fas fa-search"></i>
+                        </button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+         <div class="header-buy hidden" id="buySave">
+            <form>
+               <div>
+                  <label for="name">Name</label>
+                  <input type="email" id="name">
+               </div>
+               <div>
+                  <label for="phone">Phone number</label>
+                  <input type="tel" id="phone" placeholder="+998 (**) ***-**-**">
+               </div>
+               <button id="buyClose">Close</button>
+               <button id="buyAccept">Buy</button>
+            </form>
+         </div>
+      </header>
+
+
+      <main>
+
+         <div class="banner">
+            <div class="banner-block">
+               <p><span>Welcome</span> to ave</p>
+               <p>sign in or register</p>
+            </div>
+         </div>
+
+         <div class="auth">
+            <div class="container">
+               <div class="auth-block">
+                  <div class="auth-login">
+                     <p>sign in</p>
+                     <form action="#">
+                        <input type="email" id="loginEmail" placeholder="Your Email..">
+                        <input type="password" id="loginPassword" placeholder="Your password..">
+                        <div>
+                           <input type="submit" value="sign in" id="loginSub">
+                           <a href="#">Forgot your Password -></a>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="auth-register">
+                     <p>Register</p>
+                     <form action="#">
+                        <input type="email" id="registerEmail" placeholder="Your Email..">
+                        <input type="password" id="registerPassword" placeholder="Your password..">
+                        <input type="password" id="registerConfirm" placeholder="Confirm password..">
+                        <label>
+                           <input type="checkbox" id="registerRules">
+                           <span>Sign up for exclusive updates, discounts, new arrivals, contests, and more!</span>
+                        </label>
+                        <div>
+                           <input type="submit" value="Create Account" id="registerSub">
+                           <p>
+                              By clicking ‘Create Account’, you agree to our <a href="#">Privacy Policy</a>
+                           </p>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      <footer class="footer">
+         <div class="footer-block">
+            <div class="container">
+               <div class="footer-inner">
+                  <div class="footer-box">
+                     <div class="footer-links">
+                        <p>Information</p>
+                        <ul class="footer-list">
+                           <li class="footer-list__item"><a href="#">The brand</a></li>
+                           <li class="footer-list__item"><a href="#">Local stores</a></li>
+                           <li class="footer-list__item"><a href="#">Customer service</a></li>
+                           <li class="footer-list__item"><a href="#">Privacy & cookies</a></li>
+                           <li class="footer-list__item"><a href="#">Site map</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-links">
+                        <p>Why buy from us</p>
+                        <ul class="footer-list">
+                           <li class="footer-list__item"><a href="#">Shipping & returns</a></li>
+                           <li class="footer-list__item"><a href="#">Secure shopping</a></li>
+                           <li class="footer-list__item"><a href="#">Testimonials</a></li>
+                           <li class="footer-list__item"><a href="#">Award winning</a></li>
+                           <li class="footer-list__item"><a href="#">Ethical trading</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-links">
+                        <p>Your account</p>
+                        <ul class="footer-list">
+                           <li class="footer-list__item"><a href="#">Sign in</a></li>
+                           <li class="footer-list__item"><a href="#">Register</a></li>
+                           <li class="footer-list__item"><a href="#">View cart</a></li>
+                           <li class="footer-list__item"><a href="#">View your lookbook</a></li>
+                           <li class="footer-list__item"><a href="#">Track an order</a></li>
+                           <li class="footer-list__item"><a href="#">Update information</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-links">
+                        <p>Lookbook</p>
+                        <ul class="footer-list">
+                           <li class="footer-list__item"><a href="#">Latest posts</a></li>
+                           <li class="footer-list__item"><a href="#">Men’s lookbook</a></li>
+                           <li class="footer-list__item"><a href="#">Women’s lookbook</a></li>
+                           <li class="footer-list__item"><a href="#">Lookbooks RSS feed</a></li>
+                           <li class="footer-list__item"><a href="#">View your lookbook</a></li>
+                           <li class="footer-list__item"><a href="#">Delete your lookbook</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-links">
+                        <p>Contact details</p>
+                        <ul class="footer-list">
+                           <li class="footer-list__item">
+                              <a href="#">
+                                 Head Office: Avenue Fashion, 180-182 Regent Street, London.
+                              </a>
+                           </li>
+                           <li class="footer-list__item"><a href="#">Telephone: 0123-456-789 </a></li>
+                           <li class="footer-list__item"><a href="#">Email: support@yourwebsite.com</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="footer-banner">
+                     <div class="footer-section">
+                        <div>
+                           <p>award winner</p>
+                           <p>fashion awards 2016</p>
+                        </div>
+                     </div>
+                     <div class="footer-section">
+                        <ul class="footer-social">
+                           <li class="footer-social__item">
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                           </li>
+                           <li class="footer-social__item">
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                           </li>
+                           <li class="footer-social__item">
+                              <a href="#"><i class="fab fa-instagram-square"></i></a>
+                           </li>
+                           <li class="footer-social__item">
+                              <a href="#"><i class="fab fa-pinterest"></i></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="footer-author">
+            <div class="container">
+               <div class="footer-author-block">
+                  <div class="footer-info">
+                     <p>&copy 2016 Avenue Fashion™</p>
+                  </div>
+                  <div class="footer-info">
+                     <span>Design by RobbyDesigns.com</span>
+                     <span>Dev by Loremipsum.com</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>

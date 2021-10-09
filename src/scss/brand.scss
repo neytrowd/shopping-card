@@ -1,0 +1,58 @@
+@import "style";
+@import "header";
+@import "banner";
+@import "footer";
+
+.brand {
+   margin-top: 63px;
+
+   &-block {
+      @include flex(row, space-between, null, null);
+   }
+
+   &-box {
+      max-width: 570px;
+   }
+
+   &-photo {
+      &:nth-child(2) {
+         margin-top: 62px;
+      }
+
+      &:last-child{
+         margin-top: 60px;
+      }
+
+      img {
+         @include img;
+      }
+   }
+
+   &-info {
+      &:nth-child(1) {
+         margin-top: 60px;
+      }
+
+      p:nth-child(1) {
+         margin-top: 29px;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 18px, 600, #575153);
+      }
+
+      p:nth-child(2) {
+         margin: 20px 0 12px 0;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 13px, 500, #727272);
+      }
+
+      p:nth-child(3) {
+         @include textCharacter(none, none, 22px);
+         @include fontSet(Roboto, 15px, 400, #8e8c8c);
+
+         a {
+            color: $skyBlue;
+            text-decoration: none;
+         }
+      }
+   }
+}

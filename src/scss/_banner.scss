@@ -1,0 +1,35 @@
+.banner {
+   height: 450px;
+   position: relative;
+   text-align: center;
+   @include flex(row, center, null, center);
+   background: url("../images/bannerBg.png") 100% 100%;
+
+   p {
+      z-index: 1;
+      position: relative;
+      @include textCharacter(uppercase, none, null);
+   }
+
+   p:nth-child(1) {
+      @include fontSet(Montserrat, 48px, 300, #fff);
+      span {
+         font-weight: 700;
+      }
+   }
+
+   p:nth-child(2) {
+      margin-top: 35px;
+      @include fontSet(Montserrat, 30px, 400, #fff);
+      span {
+         color: $skyBlue;
+      }
+   }
+
+   &:before {
+      content: "";
+      background: #333;
+      opacity: 0.7;
+      @include position(absolute, 0, 0, 0, 0, 0);
+   }
+}

@@ -1,0 +1,303 @@
+@import "style";
+@import "header";
+@import "banner";
+@import "footer";
+
+.product {
+   margin-top: 63px;
+
+   &-box {
+      @include flex(row, space-between, null, null);
+   }
+
+   &-photo,
+   &-character {
+      width: 570px;
+   }
+
+   &-photo {
+      height: 710px;
+
+      img {
+         height: 100%;
+         width: 100%;
+      }
+   }
+
+   .splide,
+   .splide__track,
+   .splide__list {
+      height: 100%;
+   }
+
+   &-character {
+      &__title {
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 18px, 600, #575153);
+      }
+
+      &__box {
+         margin: 25px 0;
+         @include flex(row, space-between, null, null);
+
+         div {
+            position: relative;
+         }
+
+         div:nth-child(n + 3):before {
+            content: "|";
+            width: 1px;
+            @include position(absolute, 0, null, null, -12px, 4);
+         }
+      }
+
+      &__rating {
+         display: inline-block;
+         width: 75px;
+         height: 12px;
+      }
+
+      &__star {
+         float: right;
+         position: relative;
+         width: 0;
+         height: 0;
+         margin: 0 15px 20px 0;
+         cursor: pointer;
+      }
+
+      &__star:before {
+         content: "\f005";
+         color: #dfdfde;
+         font-size: 14px;
+         width: 20px;
+         height: 20px;
+         position: absolute;
+         left: 0;
+         top: 0;
+      }
+
+      &__star:hover:before,
+      &__star:hover ~ &__star:before {
+         content: "\f005";
+         color: #ffd779;
+      }
+
+      &__star:checked:before,
+      &__star:checked ~ &__star:before {
+         content: "\f005";
+         color: #ffb300 !important;
+      }
+
+      &__count {
+         @include fontSet(Montserrat, 14px, 600, #9a9a9a);
+      }
+
+      &__review > a {
+         @include textCharacter(none, none, 20px);
+         @include fontSet(Montserrat, 14px, 600, $skyBlue);
+      }
+
+      &__social > span {
+         padding-right: 7px;
+         @include textCharacter(none, none, 20px);
+         @include fontSet(Montserrat, 14px, 600, #9a9a9a);
+      }
+
+      &__links {
+         display: inline-block;
+
+         li {
+            display: inline-block;
+         }
+
+         li:nth-child(n + 2) {
+            margin-left: 17px;
+         }
+
+         a {
+            @include textCharacter(none, none, 20px);
+            @include fontSet(Montserrat, 14px, 600, #9a9a9a);
+         }
+      }
+
+      &__price {
+         @include textCharacter(none, none, 20px);
+         @include fontSet(Montserrat, 30px, 300, #9a9a9a);
+
+         span {
+            padding-right: 20px;
+         }
+
+         span:nth-child(1) {
+            text-decoration: line-through;
+         }
+      }
+
+      &__info {
+         margin: 44px 0 30px 0;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Roboto, 15px, 600, #625d5e);
+
+         p:nth-child(n + 2) {
+            margin-top: 10px;
+         }
+
+         p:nth-child(3) > span {
+            color: $skyBlue;
+         }
+
+         span {
+            @include textCharacter(none, none, 20px);
+            @include fontSet(Roboto, 15px, 400, #625d5e);
+         }
+
+         a {
+            @include textCharacter(none, none, 20px);
+            @include fontSet(Roboto, 15px, 400, $skyBlue);
+         }
+      }
+
+      &__description {
+         @include textCharacter(none, none, 20px);
+         @include fontSet(Roboto, 15px, 400, #625d5e);
+
+         ul {
+            padding-left: 15px;
+            margin-top: 13px;
+         }
+
+         li:nth-child(n + 2) {
+            margin-top: 4px;
+         }
+      }
+
+      &__options {
+         margin: 38px 0 58px 0;
+
+         div {
+            display: inline-block;
+            margin-right: 27px;
+         }
+
+         div:nth-child(1),
+         div:nth-child(2) {
+            width: 170px;
+         }
+
+         p {
+            margin-bottom: 10px;
+            @include textCharacter(uppercase, none, 20px);
+            @include fontSet(Montserrat, 13px, 600, #625d5e);
+         }
+
+         select {
+            width: 100%;
+            padding: 8px;
+            @include fontSet(Montserrat, 13px, 400, #625d5e);
+         }
+
+         input {
+            width: 70px;
+            padding: 8px;
+            @include fontSet(Montserrat, 13px, 400, #625d5e);
+         }
+      }
+
+      &__actions {
+         button {
+            display: inline-block;
+            padding: 18px 49px;
+            background: none;
+            cursor: pointer;
+            transition: 0.3s all linear;
+            border: 2px solid #737373;
+            @include textCharacter(uppercase, none, 20px);
+            @include fontSet(Montserrat, 16px, 400, #625d5e);
+
+            &:hover {
+               color: #fff;
+               border-color: $lightBlack;
+               background: $lightBlack;
+            }
+
+            i {
+               padding-right: 10px;
+            }
+
+            &:nth-child(2) {
+               margin-left: 20px;
+            }
+         }
+      }
+
+      &__compare {
+         margin-top: 30px;
+         display: inline-block;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 14px, 600, #625d5e);
+         letter-spacing: 2px;
+
+         img {
+            padding-right: 10px;
+         }
+
+         span {
+            vertical-align: 10px;
+         }
+      }
+   }
+
+   &-tab {
+      margin-top: 33px;
+
+      input[type="radio"] {
+         display: none;
+
+         @for $var from 1 through 5 {
+            &:nth-child(#{$var}):checked ~ {
+               .product-tab__element .product-tab__link:nth-child(#{$var}) {
+                  background: $lightBlack;
+                  color: #fff;
+               }
+
+               .product-tab__block .product-tab__item:nth-child(#{$var}) {
+                  display: block;
+               }
+            }
+         }
+      }
+
+      &__element {
+         background: #f8f8f8;
+      }
+
+      &__link {
+         display: inline-block;
+         padding: 15px;
+         cursor: pointer;
+         min-width: 140px;
+         text-align: center;
+         @include textCharacter(uppercase, none, 20px);
+         @include fontSet(Montserrat, 16px, 600, #575153);
+      }
+
+      &__item {
+         display: none;
+         padding: 22px 15px;
+         padding-bottom: 0;
+         @include textCharacter(none, none, 22px);
+         @include fontSet(Roboto, 15px, 400, #575153);
+
+         p:nth-child(1) {
+            margin-bottom: 12px;
+            @include textCharacter(uppercase, none, 20px);
+            @include fontSet(Montserrat, 13px, 600, #575153);
+         }
+
+         p:nth-child(2) {
+            margin-bottom: 20px;
+         }
+      }
+   }
+}
